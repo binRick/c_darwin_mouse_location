@@ -4,7 +4,7 @@
 
 ![screenshot](./assets/demo.png)
 
-- Usage Code:
+- Example:
 
 ![screenshot](./assets/usage.png)
 
