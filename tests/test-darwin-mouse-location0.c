@@ -1,6 +1,6 @@
 /*******************************************/
 //#define MODULE_LOG_LEVEL    LOGGER_ERROR
-#define MODULE_LOG_LEVEL LOGGER_TRACE
+#define MODULE_LOG_LEVEL    LOGGER_TRACE
 #define GET_QTY             50
 /*******************************************/
 #include "../include/includes.h"

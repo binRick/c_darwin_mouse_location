@@ -46,9 +46,6 @@ exports(darwin_mouse_location) {
 
 
 void darwin_mouse_location_deinit(dml_m *exports) {
-  if (dml_r->mode >= LOGGER_DEBUG) {
-    fprintf(stderr, "deinit.....\n");
-  }
   clib_module_deinit(darwin_mouse_location);
 }
 
@@ -71,7 +68,7 @@ static inline int __get_mouse_location() {
   dml_r->x = dml_r->point.x;
   dml_r->y = dml_r->point.y;
 
-  return((dml_r->x > 0 && dml_r->y > 0));
+  return(dml_r->x > -1 && dml_r->y > -1);
 }
 
 
@@ -96,6 +93,7 @@ int darwin_mouse_location_init(dml_m *exports) {
 #define DarwinMouseLocation        dml_m
 #define InitDarwinMouseLocation()    { dml_r }
 #define FreeDarwinMouseLocation    clib_module_free
+
 
 DarwinMouseLocation_t * get_darwin_mouse_location(){
   DarwinMouseLocation *dml = InitDarwinMouseLocation();
